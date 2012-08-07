@@ -1,11 +1,11 @@
 {
-    "projectName": "Ab",
-    "deployDir": "Ab",
-    "licenseText": "Ab",
+    "projectName": "core",
+    "deployDir": "core",
+    "licenseText": "core",
     "pkgs": [
      {
-        "name": "Ab",
-        "file": "/Ab.js",
+        "name": "core",
+        "file": "/core.js",
         "isDebug": true,
         "fileIncludes": [
         	{
@@ -17,46 +17,50 @@
 	            "path": "sdk/"
 	        },
 	        {
+	            "text": "base.js",
+	            "path": "sdk/core/"
+	        },
+	        {
 	            "text": "DomHelper.js",
-	            "path": "sdk/Ab/util/"
+	            "path": "sdk/core/util/"
 	        },
 			{
 	            "text": "Format.js",
-	            "path": "sdk/Ab/util/"
+	            "path": "sdk/core/util/"
 	        },
 			{
 	            "text": "Template.js",
-	            "path": "sdk/Ab/util/"
+	            "path": "sdk/core/util/"
 	        },
 			{
 	            "text": "Template-more.js",
-	            "path": "sdk/Ab/util/"
+	            "path": "sdk/core/util/"
 	        },
 			{
 	            "text": "XTemplate.js",
-	            "path": "sdk/Ab/util/"
+	            "path": "sdk/core/util/"
 	        },
 	        
 	        
 	        {
 	            "text": "Application.js",
-	            "path": "sdk/Ab/"
+	            "path": "sdk/core/"
 	        },
 	        {
 	            "text": "ClassManager.js",
-	            "path": "sdk/Ab/"
+	            "path": "sdk/core/"
 	        },
 	        {
 	            "text": "ClassDefine.js",
-	            "path": "sdk/Ab/"
+	            "path": "sdk/core/"
 	        },
 	        {
 	            "text": "Observable.js",
-	            "path": "sdk/Ab/"
+	            "path": "sdk/core/"
 	        },
 	        {
 	            "text": "Controller.js",
-	            "path": "sdk/Ab/"
+	            "path": "sdk/core/"
 	        }
        ]
      }

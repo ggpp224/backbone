@@ -14,7 +14,7 @@
     		
     		//this.initIndexPage();
     		
-	 		/*this.control({
+	 		/*this.bindEvents({
 	 			'viewport':{
 	 				'afterrendered':this.onAfterRendered
 	 			},

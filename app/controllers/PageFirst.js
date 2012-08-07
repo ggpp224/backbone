@@ -11,7 +11,7 @@
 	 	init: function(){  		
     		//this.initIndexPage();
     		
-	 		this.control({
+	 		this.bindEvents({
 	 			'v_list1':{
 	 				'rowclick':this.onClicked
 	 			}

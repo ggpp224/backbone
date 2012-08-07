@@ -10,23 +10,23 @@
  
  Ambow.Controller.prototype = {
  	init:function(){
- 		/* this.control({
-            'button': {
-                click: this.refreshGrid
-            }
-        });*/
+ 		
  	},
  	
- 	control: function(o){
+ 	bindEvents: function(o){
  		var me = this;
  		for(var key in o ){
  			var view = Ambow.app.getView(key);
- 			var events = view.events||{}; //view 已配置的events
+ 			
+ 			//view 已配置的events
+ 			
+ 			var events = view.events||{}; 
  			//Ambow.apply(events,o[key]);
  			var es = {};
  			var ori_o = o[key];
  			
  			//controller定义的事件
+ 			
  			for(okey in ori_o){
  				if(!/\s/.test(okey)){
  					view.on(okey,ori_o[okey].createDelegate(this));
@@ -36,6 +36,7 @@
  			}
  			
  			//view定义的事件
+ 			
  			for(ekey in events){
  				if(!/\s/.test(ekey)){
  					//.createDelegate(view,[view,me],true)
