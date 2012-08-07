@@ -3,7 +3,14 @@
  * @datetime 2012-4-26
  * @description base.js
  */
-
+jQuery.Event.prototype.getTarget = function(selector){
+	var target = $(this.target);
+	if(target.filter(selector).length>0){
+		return target;
+	}
+	
+	return target.parents(selector);
+};
 /**
  * 对dom的简单封装
  * @param {String} id , dom id
