@@ -7,11 +7,11 @@
  /**
   * List view类
   */
- Ab.define('Ab.view.ListView',{
+ Ambow.define('Ambow.view.ListView',{
  	
  	initialize: function(cfg){
  		var cfg = cfg||{};
- 		Ab.apply(this,cfg);
+ 		Ambow.apply(this,cfg);
  		
  		//@property requered
  		this.store = this.store||new Backbone.Collection();
@@ -110,7 +110,7 @@
  		this.foot = $(this.el).children('tfoot').find('td')[0];
  		_.each(this.store.models ,function(m,idx){
  			m.set("index",idx);
- 			var it = new Ab.view.ListItem({model:me.mapModel(m)});
+ 			var it = new Ambow.view.ListItem({model:me.mapModel(m)});
  			me.items.push(it);
  			me.addItem(it);
  		});
@@ -130,7 +130,7 @@
  		var me = this;
  		$(this.body).html('');
  		_.each(this.store.models ,function(m){
- 			var it = new Ab.view.ListItem({model:me.mapModel(m)});
+ 			var it = new Ambow.view.ListItem({model:me.mapModel(m)});
  			me.items.push(it);
  			me.addItem(it);
  		});
@@ -143,13 +143,13 @@
  /**
   * 数据操作类
   */
- Ab.define('Ab.store.ListStore',{
+ Ambow.define('Ambow.store.ListStore',{
  	initialize: function(cfg){
  		var cfg = cfg||{};
- 		Ab.apply(this,cfg);	
+ 		Ambow.apply(this,cfg);	
  		this.oriUrl = this.url;
  		if(this.params){
- 			this.url = Ab.urlAppend(this.oriUrl,Ab.urlEncode(this.params));
+ 			this.url = Ambow.urlAppend(this.oriUrl,Ambow.urlEncode(this.params));
  		}
 
  	},
@@ -179,7 +179,7 @@
  		var me = this;
  		if(this.view.pager){
  			var params = this.params||{};
- 			this.url = Ab.urlAppend(me.oriUrl,Ab.urlEncode(Ab.apply(params,{start:1,limit:me.view.pager.pageSize})));
+ 			this.url = Ambow.urlAppend(me.oriUrl,Ambow.urlEncode(Ambow.apply(params,{start:1,limit:me.view.pager.pageSize})));
  		}
  		//this.packURL();
  		//获取列表
@@ -206,7 +206,7 @@
  			this.packUrl = opt.packUrl;
 	 		if(this.view.pager){
 	 			var params = this.params||{};
-	 			this.url = Ab.urlAppend(me.oriUrl,Ab.urlEncode(Ab.apply(params,{start:1,limit:me.view.pager.pageSize})));
+	 			this.url = Ambow.urlAppend(me.oriUrl,Ambow.urlEncode(Ambow.apply(params,{start:1,limit:me.view.pager.pageSize})));
 	 		}
 	 		//this.packURL();
  		}
@@ -251,11 +251,11 @@
  /**
   * ROW 类
   */
- Ab.define('Ab.view.ListItem',{
+ Ambow.define('Ambow.view.ListItem',{
  	
  	initialize: function(cfg){
  		var cfg = cfg||{};
- 		Ab.apply(this,cfg);
+ 		Ambow.apply(this,cfg);
  		
  		
  	},
@@ -278,11 +278,11 @@
  /**
   * 分页类
   */
- Ab.define('Ab.view.ListPager',{
+ Ambow.define('Ambow.view.ListPager',{
  	
  	initialize: function(cfg){
  		var cfg = cfg||{};
- 		Ab.apply(this,cfg);
+ 		Ambow.apply(this,cfg);
  		
  		
  	},
@@ -322,7 +322,7 @@
  		}
  		
  		var params = params||{};
- 		url = Ab.urlAppend(url,Ab.urlEncode(Ab.apply(params,{start:num,limit:me.pageSize})));
+ 		url = Ambow.urlAppend(url,Ambow.urlEncode(Ambow.apply(params,{start:num,limit:me.pageSize})));
  		return url; 		
  	},
  	
