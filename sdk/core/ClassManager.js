@@ -4,7 +4,7 @@
  * @description 工厂方法，创建不同组件类
  */
  
- Ambow.ClassManager ={
+ Ambow.ClassFactory ={
  	
  	v_reg : /Ambow.view./,
  	c_reg : /Ambow.controller./,

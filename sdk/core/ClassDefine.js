@@ -16,7 +16,7 @@
 	 		Ambow.apply(this,cfg);
 	 	}
  	});
- 	Ambow.ClassManager.define({
+ 	Ambow.ClassFactory.define({
  		className:cmpStr,
  		cfg: opt
  	});
@@ -31,7 +31,7 @@
  Ambow.create = function(cmpStr,opt){
  	//var c = new Function('cmpStr','opt','return new '+cmpStr+'(cmpStr,opt)');
  	//var cmp = new c(opt);
- 	return Ambow.ClassManager.create({
+ 	return Ambow.ClassFactory.create({
  		className:cmpStr,
  		cfg: opt
  	});
